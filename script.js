@@ -16,3 +16,8 @@ document.addEventListener('DOMContentLoaded', function(){
   var x2 = document.getElementById('x-link-2');
   if(x2) x2.addEventListener('click', function(e){ e.preventDefault(); alert('سيتم إضافة رابط X لاحقاً.'); });
 });
+function toggleContacts() {
+  const bar =
+    document.getElementById("contact-bar");
+  bar.classList.toggle("hidden");
+}
