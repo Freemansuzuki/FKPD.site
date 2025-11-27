@@ -8,13 +8,16 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="theme-colorful">
+
+  <audio id="ui-sound" src="assets/sounds/click.wav" preload="auto"></audio>
+
   <header class="site-header">
     <div class="brand">
       <img src="assets/logo.png" alt="logo" class="logo-small">
       <nav class="main-nav">
         <a href="index.html" class="nav-link">الرئيسية</a>
         <a href="about.html" class="nav-link active">عن المنظمة</a>
-        <button id="contact-btn-2" class="nav-link contact-btn">تواصل معنا ▾</button>
+        <button id="contact-btn-2" class="nav-link contact-btn" onclick="toggleContacts(); playSound();">تواصل معنا ▾</button>
       </nav>
     </div>
 
@@ -25,23 +28,22 @@
       <a class="contact-icon" id="tg-link-2" href="https://t.me/+niHf1-YNgIZmMGRk" target="_blank">
         <img src="assets/tg.png" alt="Telegram"><span>تلغرام</span>
       </a>
-      <button class="contact-icon disabled" id="x-link-2" title="X (سيضاف لاحقاً)">
-        <img src="assets/x.png" alt="X"><span>X</span>
-      </button>
+      <button class="contact-icon disabled" id="x-link-2"><img src="assets/x.png" alt="X"><span>X</span></button>
     </div>
   </header>
 
   <main class="container">
     <article class="card">
       <h1>عن Foundational Kuklos Property Dictatorship</h1>
-      <p>تأسست FKPD في 1444/6/7 هـ ككيان استراتيجي يهدف لبناء بنى تمويلية ودعم شبكات متينة. الأهداف:</p>
+      <p>تأسست FKPD في 1444/6/7 هـ ككيان استراتيجي يهدف لبناء بنى تمويلية ودعم شبكات متينة.</p>
       <ul>
         <li>تمويل تنظيمات ثانية أهدافها …</li>
         <li>بناء شبكات دعم لوجستي ومادي</li>
         <li>التخطيط للاستدامة المالية</li>
       </ul>
 
-      <div class="redacted" aria-hidden="true"></div>
+      <!-- السطر الأسود مخفي - ارفعه إذا تحب المظهر السري -->
+      <!-- <div class="redacted"></div> -->
 
       <p class="join">انضموا لنا — <span class="en">Join Us</span></p>
     </article>

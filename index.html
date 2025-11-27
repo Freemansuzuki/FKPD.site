@@ -8,20 +8,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="theme-colorful">
-    <audio id="ui-sound" src="assets/sounds/click.wav"><audio/>
+
+  <!-- صوت واجهة (ملف WAV ستضعه في assets/sounds/click.wav) -->
+  <audio id="ui-sound" src="assets/sounds/click.wav" preload="auto"></audio>
+
   <header class="site-header">
     <div class="brand">
       <img src="assets/logo.png" alt="logo" class="logo-small">
       <nav class="main-nav">
         <a href="index.html" class="nav-link active">الرئيسية</a>
         <a href="about.html" class="nav-link">عن المنظمة</a>
-        <button class="contact-btn"onclick="toggleContacts()">تواصل معنا ▾</button>
+        <!-- زر تواصل الآن يظهر شريط أيقونات داخل الصفحة -->
+        <button id="contact-btn" class="nav-link contact-btn" onclick="toggleContacts(); playSound();">
+          تواصل معنا ▾
+        </button>
       </nav>
-      <div id="contact-bar" class="contact-bar hidden">
-        
-      </div>
-    </div> 
+    </div>
 
+    <!-- drop داخلي لإيقونات التواصل -->
     <div id="contact-drop" class="contact-drop hidden" aria-hidden="true">
       <a class="contact-icon" id="fb-link" href="https://www.facebook.com/profile.php?id=61582579611736" target="_blank" title="Facebook">
         <img src="assets/fb.png" alt="Facebook"><span>فيسبوك</span>
@@ -31,24 +35,23 @@
       </a>
       <button class="contact-icon disabled" id="x-link" title="X (سيضاف لاحقاً)">
         <img src="assets/x.png" alt="X"><span>X</span>
-        oneclick="toggleContacts(); playSound();"
       </button>
     </div>
   </header>
 
   <main class="hero">
     <div class="hero-inner">
-      <h1 class="fkpd-title">
+      <!-- FKPD ملون حسب كل كلمة -->
+      <h1 class="title fkpd">
         <span class="f-word">Foundational</span>
         <span class="k-word">Kuklos</span>
         <span class="p-word">Property</span>
         <span class="d-word">Dictatorship</span>
       </h1>
 
-
-      
-      <div class="logo-box">
-        <img src="assets/logo.png" class="fkpd-logo" alt="FKPD Logo">
+      <!-- شعار مركزي تحت العنوان -->
+      <div class="logo-wrap">
+        <img src="assets/logo.png" alt="شعار FKPD" class="hero-logo">
       </div>
 
       <p class="subtitle">Foundational Kuklos Property Dictatorship — تأسست 1444/6/7 هـ</p>
@@ -58,6 +61,8 @@
         <p>تأسست FKPD بتاريخ <strong>1444/6/7 هـ</strong>. تهدف المنظمة إلى بناء هياكل تمويلية وشبكات دعم لأهداف محددة.</p>
         <p>الأهداف: تمويل تنظيمات ثانية أهدافها …</p>
 
+        <!-- سطر "سرّي" تمت إزالته افتراضيًا حسب طلبك -->
+        <!-- لو تريد سطرًا أسودًا احتفظ به بهذه الصيغة: <div class="redacted"></div> -->
 
         <p class="join">انضموا لنا — <span class="en">Join Us</span></p>
       </div>
@@ -65,7 +70,7 @@
   </main>
 
   <footer class="site-footer">
-    <div>© FKPD 1444/1445 — جميع الحقوق محفوظة</div>
+    <div>© FKPD — جميع الحقوق محفوظة</div>
   </footer>
 
 <script src="script.js"></script>
