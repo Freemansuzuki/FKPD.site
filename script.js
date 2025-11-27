@@ -21,3 +21,6 @@ function toggleContacts() {
     document.getElementById("contact-bar");
   bar.classList.toggle("hidden");
 }
+function playSound() {
+  documentgetElementById("ui-sound").play();
+}
