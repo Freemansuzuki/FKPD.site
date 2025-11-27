@@ -65,6 +65,21 @@ body.theme-colorful{
   letter-spacing: 1px;
 }
 
+.logo-box {
+  disblay: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.fkpd-logo {
+  width: 180px;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards:
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
 .f-word { color: #00b050; }
 .k-word { color: #ff0000; }
 .p-word { color: #ffd800; }
