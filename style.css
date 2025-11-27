@@ -1,0 +1,58 @@
+:root{
+  --accent-green: #10b981; /* Foundational (F) */
+  --accent-red: #ef4444;   /* Kuklos (K) */
+  --accent-yellow: #facc15;/* Property (P) */
+  --accent-blue: #0b3d91;  /* Dictatorship (D) */
+  --white: #ffffff;
+}
+
+*{box-sizing:border-box}
+body.theme-colorful{
+  background:
+    radial-gradient(circle at 10% 20%, rgba(15,23,42,0.85), transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(16,185,129,0.06), transparent 20%),
+    linear-gradient(135deg,#05060a,#08111a 40%, #0b2430 100%);
+  color:var(--white); font-family: Inter, system-ui, Arial; margin:0;
+}
+
+/* header */
+.site-header{display:flex;flex-direction:column;align-items:center;padding:18px 12px;position:relative;z-index:50}
+.brand{width:100%;max-width:1100px;display:flex;justify-content:space-between;align-items:center}
+.logo-small{width:56px;height:56px;border-radius:10px;object-fit:cover}
+
+/* nav */
+.main-nav{display:flex;gap:12px;align-items:center}
+.nav-link{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:10px;color:var(--white);text-decoration:none;border:1px solid rgba(255,255,255,0.03);cursor:pointer;transition:transform .18s ease}
+.nav-link:hover{transform:translateY(-4px)}
+.nav-link.active{outline:2px solid rgba(250,204,21,0.12)}
+
+/* contact drop */
+.contact-drop{position:absolute;right:20px;top:72px;background: rgba(0,0,0,0.55);padding:10px;border-radius:10px;display:flex;gap:10px;align-items:center;backdrop-filter: blur(6px);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.contact-drop.hidden{display:none}
+.contact-icon{display:flex;flex-direction:column;align-items:center;gap:6px;border:none;background:none;color:var(--white);text-decoration:none;padding:6px;border-radius:8px;cursor:pointer}
+.contact-icon img{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 8px 18px rgba(2,6,23,0.6)}
+.contact-icon.disabled{opacity:0.55;cursor:not-allowed}
+
+/* hero and FKPD title */
+.hero{display:flex;align-items:center;justify-content:center;padding:36px 12px 80px}
+.hero-inner{text-align:center;max-width:920px;margin:0 auto;padding:18px}
+.title.fkpd{font-size:40px;line-height:1.2;margin:0;font-weight:800;color:var(--white)}
+.title.fkpd .word{display:inline-block;margin:0 6px;padding:6px 8px;border-radius:8px}
+.title.fkpd .f{background:var(--accent-green);color:#071012}
+.title.fkpd .k{background:var(--accent-red);color:#fff}
+.title.fkpd .p{background:var(--accent-yellow);color:#071012}
+.title.fkpd .d{background:var(--accent-blue);color:#fff}
+
+/* hero logo */
+.hero-logo{width:220px;height:220px;object-fit:contain;border-radius:18px;margin:18px auto;box-shadow:0 18px 40px rgba(2,6,23,0.6);animation:logoIn .9s ease both}
+
+/* card */
+.card.intro-card{margin-top:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:14px;color:var(--white);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.redacted{height:14px;background:#000;border-radius:6px;margin:16px 0}
+.join{margin-top:10px;color:var(--accent-green);font-weight:700}
+
+/* footer */
+.site-footer{padding:28px 12px;text-align:center;color:rgba(255,255,255,0.6);margin-top:28px}
+
+/* animations */
+@keyframes logoIn{0%{opacity:0;transform:translateY(18px) scale(.98)}100%{opacity:1;transform:translateY(0) scale(1)}}

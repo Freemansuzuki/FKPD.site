@@ -1,47 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>Foundational Kuklos Property Dictatorship</title>
-    <link rel="stylesheet" href="style_dark.css" id="theme">
-    <script src="script.js" defer></script>
-    <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FKPD — الرئيسية</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="theme-colorful">
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.png" alt="logo" class="logo-small">
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">الرئيسية</a>
+        <a href="about.html" class="nav-link">عن المنظمة</a>
+        <button id="contact-btn" class="nav-link contact-btn">تواصل معنا ▾</button>
+      </nav>
+    </div>
 
-<body>
+    <div id="contact-drop" class="contact-drop hidden" aria-hidden="true">
+      <a class="contact-icon" id="fb-link" href="https://www.facebook.com/profile.php?id=61582579611736" target="_blank" title="Facebook">
+        <img src="assets/fb.png" alt="Facebook"><span>فيسبوك</span>
+      </a>
+      <a class="contact-icon" id="tg-link" href="https://t.me/+niHf1-YNgIZmMGRk" target="_blank" title="Telegram">
+        <img src="assets/tg.png" alt="Telegram"><span>تلغرام</span>
+      </a>
+      <button class="contact-icon disabled" id="x-link" title="X (سيضاف لاحقاً)">
+        <img src="assets/x.png" alt="X"><span>X</span>
+      </button>
+    </div>
+  </header>
 
-<header>
-    <h1 class="logo">FKPD</h1>
-    <nav>
-        <a href="index.html">الرئيسية</a>
-        <a href="about.html">عن المنظمة</a>
-        <a href="contact.html">تواصل معنا</a>
-        <a href="index_en.html">English</a>
-    </nav>
-</header>
+  <main class="hero">
+    <div class="hero-inner">
+      <h1 class="title fkpd">
+        <span class="word f">Foundational</span>
+        <span class="word k">Kuklos</span>
+        <span class="word p">Property</span>
+        <span class="word d">Dictatorship</span>
+      </h1>
 
-<button class="theme-toggle" onclick="toggleTheme()">الوضع الليلي / النهاري</button>
+      <div class="logo-wrap">
+        <img src="assets/logo.png" alt="شعار FKPD" class="hero-logo">
+      </div>
 
-<section class="content">
-    <h2>عن المنظمة</h2>
+      <p class="subtitle">Foundational Kuklos Property Dictatorship — تأسست 1444/6/7 هـ</p>
 
-    <p>
-       تاسست منظمة Foundational Kuklos Property Dictatorship في تاريخ 1444/6/7 هجريه نشات بالبدايه كمنظمه سريه غير واضحة الاهداف للعلن وفي مطلع عام 1445 هجريه اعلنت المنظمه هدفها بتمويل ومساعدة التنظيمات الثانية او انضمام المنظمات الراغبه بانهاء الظلم والطغيان
-    </p>
+      <div class="card intro-card">
+        <h2>عن المنظمة</h2>
+        <p>تأسست FKPD بتاريخ <strong>1444/6/7 هـ</strong>. تهدف المنظمة إلى بناء هياكل تمويلية وشبكات دعم لأهداف محددة.</p>
+        <p>الأهداف: تمويل تنظيمات ثانية أهدافها …</p>
 
-    <p>
-        اعتمدت المنظمه على تمويل التنظيمات المواليه و انشاء تحالفات استراتيجية وتبنت المنظمه مبدا السرية التامه في تحركاتها
-    </p>
-<p>
-   تم انشاء هاذا الموقع ليكون النواة الاساسيه للموقع الرسمي ولا يزال الموقع قيد التطوير
-</p>
-    
-    <div class="redacted"></div>
-</section>
+        <div class="redacted" aria-hidden="true"></div>
 
-<footer>
-    © FKPD 1444/1445 — جميع الحقوق محفوظة
-</footer>
+        <p class="join">انضموا لنا — <span class="en">Join Us</span></p>
+      </div>
+    </div>
+  </main>
 
+  <footer class="site-footer">
+    <div>© FKPD — جميع الحقوق محفوظة</div>
+  </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
