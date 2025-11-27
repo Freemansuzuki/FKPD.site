@@ -56,3 +56,16 @@ body.theme-colorful{
 
 /* animations */
 @keyframes logoIn{0%{opacity:0;transform:translateY(18px) scale(.98)}100%{opacity:1;transform:translateY(0) scale(1)}}
+
+.fkpd-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: blod;
+  margin-top: 25px;
+  letter-spacing: 1px;
+}
+
+.f-word { color: #00b050; }
+.k-word { color: #ff0000; }
+.p-word { color: #ffd800; }
+.d-word { color: #001a4d; }
