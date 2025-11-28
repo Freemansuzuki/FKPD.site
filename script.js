@@ -1,32 +1,53 @@
+// script.js — contact panel show/hide + sounds
 document.addEventListener('DOMContentLoaded', function(){
-  function toggleDrop(id){
-    var el = document.getElementById(id);
-    if(!el) return;
-    el.classList.toggle('hidden');
-    if(!el.classList.contains('hidden')){
-      setTimeout(function(){ el.classList.add('hidden'); }, 6000);
-    }
-  }
-  // وصل الأزرار إلى drop المناسب
-  var b1 = document.getElementById('contact-btn');
-  if(b1) b1.addEventListener('click', function(){ toggleDrop('contact-drop'); });
-  var b2 = document.getElementById('contact-btn-2');
-  if(b2) b2.addEventListener('click', function(){ toggleDrop('contact-drop-2'); });
 
-  // زر X غير مفعّل (يعطي رسالة)
-  var x = document.getElementById('x-link');
-  if(x) x.addEventListener('click', function(e){ e.preventDefault(); alert('سيتم إضافة رابط X لاحقاً.'); });
-  var x2 = document.getElementById('x-link-2');
-  if(x2) x2.addEventListener('click', function(e){ e.preventDefault(); alert('سيتم إضافة رابط X لاحقاً.'); });
-});
+  const contactBtn = document.getElementById('contact-btn');
+  const panel = document.getElementById('contact-panel');
+  const soundOpen = document.getElementById('sound-open');
+  const soundHover = document.getElementById('sound-hover');
+  const soundClick = document.getElementById('sound-click');
 
-// وظيفة تشغيل الصوت
-function playSound(){
+  // play subtle open sound once when page loads (if user gesture allows)
   try {
-    var a = document.getElementById('ui-sound');
-    if(a && typeof a.play === 'function') {
-      a.currentTime = 0;
-      a.play().catch(()=>{/* ignore autoplay block */});
+    if(soundOpen){
+      soundOpen.volume = 0.22;
+      soundOpen.play().catch(()=>{ /* autoplay blocked — fine */ });
     }
   } catch(e){}
-}
+
+  // show panel when mouse enters button; hide when leaves panel area
+  let hideTimeout = null;
+
+  function showPanel(){
+    if(hideTimeout) { clearTimeout(hideTimeout); hideTimeout = null; }
+    panel.classList.add('show');
+    panel.setAttribute('aria-hidden','false');
+    contactBtn.setAttribute('aria-expanded','true');
+    if(soundClick){ soundClick.currentTime = 0; soundClick.volume = 0.6; soundClick.play().catch(()=>{}); }
+  }
+
+  function scheduleHide(){
+    hideTimeout = setTimeout(function(){
+      panel.classList.remove('show');
+      panel.setAttribute('aria-hidden','true');
+      contactBtn.setAttribute('aria-expanded','false');
+    }, 700);
+  }
+
+  contactBtn.addEventListener('mouseenter', showPanel);
+  contactBtn.addEventListener('focus', showPanel);
+  contactBtn.addEventListener('mouseleave', scheduleHide);
+  panel.addEventListener('mouseenter', function(){ if(hideTimeout) { clearTimeout(hideTimeout); hideTimeout = null; } });
+  panel.addEventListener('mouseleave', scheduleHide);
+
+  // play hover sound when hovering icons or nav links
+  document.querySelectorAll('.contact-item, .nav-link, .icon-btn').forEach(el=>{
+    el.addEventListener('mouseenter', function(){
+      if(soundHover){ try{ soundHover.currentTime = 0; soundHover.volume = 0.35; soundHover.play().catch(()=>{}); }catch(e){} }
+    });
+    el.addEventListener('click', function(){
+      if(soundClick){ try{ soundClick.currentTime = 0; soundClick.volume = 0.6; soundClick.play().catch(()=>{}); }catch(e){} }
+    });
+  });
+
+});

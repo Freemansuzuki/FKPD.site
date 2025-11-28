@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FKPD — الرئيسية</title>
+  <link rel="icon" href="assets/icons/logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-colorful">
+
+  <!-- small brand (top-left) -->
+  <div class="small-brand">
+    <img src="assets/icons/logo.png" alt="logo small" class="small-logo">
+  </div>
+
+  <!-- header with contact button -->
+  <header class="site-header">
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link active">الرئيسية</a>
+      <a href="about.html" class="nav-link">عن المنظمة</a>
+      <button id="contact-btn" class="nav-link contact-btn" aria-haspopup="true" aria-expanded="false">تواصل معنا</button>
+    </nav>
+
+    <!-- drop panel (hidden by default) -->
+    <div id="contact-panel" class="contact-panel" aria-hidden="true">
+      <a class="contact-item" id="fb" href="https://www.facebook.com/profile.php?id=61582579611736" target="_blank">
+        <img src="assets/icons/fb.png" alt="Facebook"><span>فيسبوك</span>
+      </a>
+      <a class="contact-item" id="tg" href="https://t.me/+niHf1-YNgIZmMGRk" target="_blank">
+        <img src="assets/icons/tg.png" alt="Telegram"><span>تلغرام</span>
+      </a>
+      <button class="contact-item disabled" id="x">
+        <img src="assets/icons/x.png" alt="X"><span>X</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero">
+    <div class="hero-inner">
+      <!-- big title with colored words -->
+      <h1 class="fkpd-title">
+        <span class="f-word">Foundational</span>
+        <span class="k-word">Kuklos</span>
+        <span class="p-word">Property</span>
+        <span class="d-word">Dictatorship</span>
+      </h1>
+
+      <!-- centered hero logo under title -->
+      <div class="hero-logo-wrap">
+        <img src="assets/icons/logo.png" alt="FKPD logo" class="hero-logo">
+      </div>
+
+      <p class="subtitle">تأسست 1444/6/7 هـ — FKPD تهدف لبناء شبكات تمويل واستراتيجية.</p>
+
+      <section class="intro card">
+        <h2>عن المنظمة</h2>
+        <p>تعمل FKPD على تطوير آليات تمويل ودعم لشبكات وتعاونات استراتيجية.</p>
+        <!-- السطر الأسود السري مخفي؛ إذا تريد تفعّله: أزل التعليقات -->
+        <!-- <div class="redacted"></div> -->
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    © FKPD — جميع الحقوق محفوظة
+  </footer>
+
+  <!-- audio elements (ضع ملفات الصوت في assets/sounds/) -->
+  <audio id="sound-open" src="assets/sounds/open.mp3" preload="auto"></audio>
+  <audio id="sound-hover" src="assets/sounds/hover.mp3" preload="auto"></audio>
+  <audio id="sound-click" src="assets/sounds/click.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
