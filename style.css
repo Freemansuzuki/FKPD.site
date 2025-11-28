@@ -1,52 +1,82 @@
-/* HEADER STYLE */
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
+    font-family: "Tajawal", sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HEADER */
 .header {
     width: 100%;
-    padding: 20px 40px;
+    padding: 20px 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    animation: fadeInDown 0.8s ease forwards;
+    background: rgba(0, 0, 0, 0.32);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    animation: fadeDown 1s ease forwards;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
+/* LOGO */
 .site-logo {
-    height: 60px;
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
-    animation: fadeIn 1s ease forwards;
+    height: 70px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.28));
+    animation: fadeIn 1.2s ease forwards;
 }
 
 /* SOCIAL ICONS */
 .social-nav {
     display: flex;
-    gap: 20px;
+    gap: 22px;
 }
 
 .icon-btn img {
-    width: 35px;
-    height: 35px;
-    transition: transform 0.25s ease, filter 0.25s ease;
-    filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+    width: 36px;
+    height: 36px;
+    transition: 0.3s ease;
 }
 
 .icon-btn img:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 12px rgba(255,255,255,0.5));
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.7));
+}
+
+/* MAIN */
+.main-content {
+    text-align: center;
+    margin-top: 120px;
+    animation: fadeIn 1.3s ease forwards;
+}
+
+.title span {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 6px;
+}
+
+.f { color: #00ff66; }  /* أخضر */
+.k { color: #ff3b3b; }  /* أحمر */
+.p { color: #ffd52a; }  /* أصفر */
+.d { color: #0a3cff; }  /* أزرق غامق */
+
+.desc {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #cccccc;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ANIMATIONS */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeInDown {
+@keyframes fadeDown {
     from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0); }
 }
