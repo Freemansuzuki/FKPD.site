@@ -1,71 +1,32 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FKPD – Official Site</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Foundational Kuklos Property Dictatorship</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="space-bg"></div>
 
-<!-- ================= HEADER ================= -->
-<header class="header">
-    <div class="logo-container">
-        <img src="assets/icons/logo.png" class="site-logo" alt="Logo">
-    </div>
-
-    <nav class="social-nav">
-        <a href="https://facebook.com" class="icon-btn"><img src="assets/icons/fb.png"></a>
-        <a href="https://t.me/+niHf1-YNgIZmMGRk" class="icon-btn"><img src="assets/icons/tg.png"></a>
-        <a href="#" class="icon-btn"><img src="assets/icons/x.png"></a>
-    </nav>
+<header>
+    <img src="assets/icons/logo.png" class="logo">
+    <h1 class="title">
+        <span class="green">Foundational</span>
+        <span class="red">Kuklos</span>
+        <span class="yellow">Property</span>
+        <span class="blue">Dictatorship</span>
+    </h1>
 </header>
 
+<div class="contact">
+    <p class="contact-text">تواصل معنا</p>
+    <div class="contact-bar">
+        <a href="#"><img src="assets/icons/fb.png"></a>
+        <a href="#"><img src="assets/icons/tg.png"></a>
+        <a href="#"><img src="assets/icons/x.png"></a>
+    </div>
+</div>
 
-<!-- ================= MAIN CONTENT ================= -->
-<section class="main-content">
-
-    <h1 class="title">
-        <span class="f">Foundational</span>
-        <span class="k">Kuklos</span>
-        <span class="p">Property</span>
-        <span class="d">Dictatorship</span>
-    </h1>
-
-    <p class="desc">
-        منظمة FKPD تأسست بهدف تطوير مفاهيم السيطرة البنيوية، 
-        وتعزيز قنوات التمويل المرتبط بمشاريع خارجية ذات أهداف مشتركة.
-    </p>
-
-</section>
-
-
-<!-- ================ AUDIO FILES ================ -->
-<audio id="hoverSound" src="assets/sounds/hover.mp3"></audio>
-<audio id="clickSound" src="assets/sounds/click.mp3"></audio>
-<audio id="openSound"  src="assets/sounds/open.mp3"></audio>
-
-<script>
-window.onload = () => {
-    const a = document.getElementById("openSound");
-    a.volume = 0.25;
-    a.play();
-};
-
-const hover = document.getElementById("hoverSound");
-const click = document.getElementById("clickSound");
-
-document.querySelectorAll(".icon-btn, a, button").forEach(el => {
-    el.addEventListener("mouseenter", () => {
-        hover.currentTime = 0;
-        hover.play();
-    });
-    el.addEventListener("click", () => {
-        click.currentTime = 0;
-        click.play();
-    });
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
