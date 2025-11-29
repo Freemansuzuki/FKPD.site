@@ -25,8 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
   panel.addEventListener('mouseenter', ()=>{ if(hideTimer){ clearTimeout(hideTimer); hideTimer=null; } });
   panel.addEventListener('mouseleave', scheduleHide);
 
-  document.querySelectorAll('.contact-item, .contact-trigger, .top-right a').forEach(el=>{
-    el.addEventListener('mouseenter', ()=>{ if(sndHover){ sndHover.currentTime=0; sndHover.play().catch(()=>{}); } });
-    el.addEventListener('click', ()=>{ if(sndClick){ sndClick.currentTime=0; sndClick.play().catch(()=>{}); } });
-  });
+  document.querySelector('.contact-btn').addEventListener('mouseenter', () => {
+    let audio = new Audio('assets/sounds/hover.wav');
+    audio.play();
 });
