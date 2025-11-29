@@ -1,53 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>FKPD — الرئيسية</title>
-  <link rel="icon" href="assets/icons/logo.png">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>FKPD</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
 </head>
+
 <body>
-  <div class="nebula"></div>
+    <div class="space-bg"></div>
 
-  <header class="topbar">
-    <div class="top-right">
-      <button id="contactBtn" class="contact-trigger" aria-haspopup="true" aria-expanded="false">تواصل معنا ▾</button>
-    </div>
+    <nav class="navbar">
+        <img src="assets/icons/logo.png" class="logo">
 
-    <div id="contactPanel" class="contact-panel" aria-hidden="true">
-      <a class="contact-item" href="https://www.facebook.com/profile.php?id=61582579611736" target="_blank"><img src="assets/icons/fb.png" alt="Facebook"></a>
-      <a class="contact-item" href="https://t.me/+niHf1-YNgIZmMGRk" target="_blank"><img src="assets/icons/tg.png" alt="Telegram"></a>
-      <a class="contact-item disabled" href="#" aria-disabled="true"><img src="assets/icons/x.png" alt="X"></a>
-    </div>
-  </header>
+        <div class="contact-area">
+            <span class="contact-btn">تواصل معنا</span>
+            <div class="social-menu">
+                <a href="#"><img src="assets/icons/fb.png"></a>
+                <a href="#"><img src="assets/icons/tg.png"></a>
+                <a href="#"><img src="assets/icons/x.png"></a>
+            </div>
+        </div>
+    </nav>
 
-  <main class="hero">
-    <div class="hero-inner">
-      <h1 class="site-title">
-        <span class="w-f">Foundational</span>
-        <span class="w-k">Kuklos</span>
-        <span class="w-p">Property</span>
-        <span class="w-d">Dictatorship</span>
-      </h1>
+    <header class="title">
+        <h1>
+            <span class="green">Foundational</span>
+            <span class="red">Kuklos</span>
+            <span class="yellow">Property</span>
+            <span class="blue">Dictatorship</span>
+        </h1>
+    </header>
 
-      <div class="logo-wrap">
-        <img class="site-logo" src="assets/icons/logo.png" alt="شعار FKPD">
-      </div>
-
-      <article class="intro card">
+    <section class="article">
         <h2>أهداف المنظمة</h2>
-        <p>تأسست FKPD بتاريخ 1444/6/7 هـ. تهدف المنظمة إلى بناء قنوات تمويل ودعم تعمل عبر شبكات متعاونة لتحقيق أهداف استراتيجية محددة، بما في ذلك تمويل تنظيمات ثانية وأهداف دعم مؤسسات مرخصة.</p>
-      </article>
-    </div>
-  </main>
+        <p>
+            تهدف منظمة FKPD إلى تطوير البنى التنظيمية وتعزيز المبادئ الأساسية 
+            التي تقوم عليها الملكية، إضافة إلى إنشاء إطار عمل قوي متناسق 
+            يحافظ على الاستقرار ويعزز الإنتاجية ونمو المجتمعات.
+        </p>
+    </section>
 
-  <footer class="site-footer">© FKPD — جميع الحقوق محفوظة</footer>
+    <footer>
+        <a href="about.html" class="about-link">عن المنظمة</a>
+    </footer>
 
-  <audio id="snd-open" src="assets/sounds/open.wav" preload="auto"></audio>
-  <audio id="snd-hover" src="assets/sounds/hover.wav" preload="auto"></audio>
-  <audio id="snd-click" src="assets/sounds/click.wav" preload="auto"></audio>
-
-<script src="script.js"></script>
 </body>
 </html>
